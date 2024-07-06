@@ -58,6 +58,6 @@ class CategoryCrudTest extends TestCase
         $response = $this->delete('/categories/' . $category->id);
 
         $response->assertStatus(302); // Check for redirect status
-        $this->assertDatabaseMissing('categories', ['id' => $category->id]);
+        $this->assertDatabaseMissing('categories', ['id' => $category->id]); 
     }
 }
